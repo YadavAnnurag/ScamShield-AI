@@ -9,6 +9,21 @@ const app = express()
 
 const client = new Groq({ apiKey: process.env.GROQ_API_KEY })
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://your-app-name.vercel.app'   // ← your actual Vercel URL
+]
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}))
+
 app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json())
 
