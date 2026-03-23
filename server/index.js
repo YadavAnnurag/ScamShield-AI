@@ -11,7 +11,7 @@ const client = new Groq({ apiKey: process.env.GROQ_API_KEY })
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://your-app-name.vercel.app'   // ← your actual Vercel URL
+  'https://scam-shield-ai-gamma.vercel.app/' 
 ]
 
 app.use(cors({
