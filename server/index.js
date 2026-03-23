@@ -14,15 +14,7 @@ const allowedOrigins = [
   'https://scam-shield-ai-gamma.vercel.app/' 
 ]
 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}))
+app.use(cors())
 
 
 app.use(express.json())
