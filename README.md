@@ -2,11 +2,11 @@
 
 > Detect fake job postings instantly using AI.
 
-![ScamShield Demo](./demo.png)
+
 
 ## 🚀 Live Demo
-🌐 **Frontend:** https://your-app.vercel.app
-🔗 **Backend:** https://scamshield-api.onrender.com
+🌐 **Frontend:** https://scam-shield-ai-gamma.vercel.app/
+🔗 **Backend:** https://scamshield-ai-5h1t.onrender.com
 
 ---
 
