@@ -84,7 +84,7 @@ function ImageUploader({ onTextExtracted }) {
   return (
     <div className="mb-6">
 
-      {/* Drop Zone */}
+      
       <div
         onDrop={handleDrop}
         onDragOver={handleDragOver}
@@ -132,7 +132,7 @@ function ImageUploader({ onTextExtracted }) {
         )}
       </div>
 
-      {/* Error Message */}
+      
       {error && (
         <motion.p
           initial={{ opacity: 0, y: -4 }}
@@ -143,7 +143,7 @@ function ImageUploader({ onTextExtracted }) {
         </motion.p>
       )}
 
-      {/* Progress Bar */}
+      
       {extracting && (
         <div className="mt-3">
           <div
@@ -167,7 +167,7 @@ function ImageUploader({ onTextExtracted }) {
         </div>
       )}
 
-      {/* Extract Button */}
+      
       {image && !extracting && (
         <motion.button
           onClick={handleExtract}

@@ -27,7 +27,7 @@ app.use(cors({
 
 app.use(express.json())
 
-// ─── AI Scam Detection ────────────────────────────────────────────
+
 async function detectScamWithGroq(text) {
   const response = await client.chat.completions.create({
     model: 'llama-3.3-70b-versatile',
@@ -82,7 +82,7 @@ Rules:
   return JSON.parse(cleaned)
 }
 
-// ─── Route ────────────────────────────────────────────────────────
+
 app.post('/api/analyze', async (req, res) => {
   const { text } = req.body
 
@@ -114,12 +114,12 @@ app.post('/api/analyze', async (req, res) => {
   }
 })
 
-// ─── Cache Stats ──────────────────────────────────────────────────
+
 app.get('/api/cache-stats', (req, res) => {
   res.json(getCacheStats())
 })
 
-// ─── Start Server ─────────────────────────────────────────────────
+
 app.listen(5000, () => {
   console.log('Server running on http://localhost:5000')
 })

@@ -1,7 +1,7 @@
-// Simple in-memory cache with expiry
+
 const cache = new Map()
 
-const CACHE_TTL = 1000 * 60 * 30   // 30 minutes in milliseconds
+const CACHE_TTL = 1000 * 60 * 30 
 
 export function getCached(key) {
   const entry = cache.get(key)

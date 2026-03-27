@@ -32,7 +32,7 @@ const statusConfig = {
   }
 }
 
-// Animated score ring
+
 function ScoreRing({ score, color }) {
   const radius = 54
   const stroke = 7
